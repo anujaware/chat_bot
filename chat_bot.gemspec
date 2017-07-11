@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = ChatBot::VERSION
   s.authors     = ["Anuja Ware"]
   s.email       = ["anuja@joshsoftware.com"]
-  s.homepage    = "https://github.com/anujaware/chat-bot.git"
+  s.homepage    = "https://github.com/anujaware/chat_bot.git"
   s.summary     = "ChatBot."
   s.description = "Create decision tree of dialogues and options to chat with user i.e. predefined set of dialogue and options."
   s.license     = "MIT"
