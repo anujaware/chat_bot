@@ -16,4 +16,7 @@ gemspec
 
 group :test do
   gem 'database_cleaner'
+  gem 'faker'
+  gem 'shoulda', '~> 3.5'
+  gem 'shoulda-matchers', '~> 2.0'
 end
