@@ -1,13 +1,30 @@
-require './test/test_helper'
+require 'rails_helper'
 
+RSpec.describe ChatBot::SubCategory, type: :model do
+  SubCategory = ChatBot::SubCategory
+
+  context 'Validation' do
+    it { should validate_presence_of(:name) }
+    #it { should validate_uniqueness_of(:name).case_insensitive.scoped_to(:category_id) }
+    it { should validate_presence_of(:category) }
+    it { should validate_numericality_of(:priority).only_integer.is_less_than(11).is_greater_than(0) }
+    it { should validate_inclusion_of(:starts_on_key).in_array(SubCategory::STARTS_ON) }
+
+    it 'uniqueness' do
+      #create(:sub_category)
+      category = ChatBot::Category.create(name: Faker::Name.name)
+      sub = SubCategory.create(name: Faker::Name.name, category_id: category.id)
+      p sub.errors
+      should validate_uniqueness_of(:name).case_insensitive.scoped_to(:category_id)
+    end
+  end
+
+
+end
+
+=begin
 module ChatBot
   class SubCategoryTest < ActiveSupport::TestCase
-
-    [:name, :name].each do |field|
-      should validate_presence_of field
-    end
-    should validate_numericality_of(:priority).only_integer.is_less_than(11).is_greater_than(0)
-    should validate_inclusion_of(:starts_on_key).in_array(SubCategory::STARTS_ON)
 
     def setup
       @category = Category.new name: 'Introduction'
@@ -155,4 +172,4 @@ module ChatBot
       end
     end
   end
-end
+=end
