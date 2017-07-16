@@ -7,6 +7,9 @@ class CreateChatBotDialogs < ActiveRecord::Migration
       t.string :message_type
       t.integer :repeat_limit
       t.integer :sub_category_id
+      t.string :slug, :null => false
+
+      t.index :slug
 
       t.timestamps null: false
     end
