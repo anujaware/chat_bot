@@ -14,10 +14,6 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 
-gem 'friendly_id'
-gem 'aasm'
-gem 'rubocop', require: false
-
 group :test do
   gem 'database_cleaner'
   gem 'faker'
