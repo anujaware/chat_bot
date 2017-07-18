@@ -15,6 +15,7 @@ gemspec
 
 
 gem 'friendly_id'
+gem 'aasm'
 gem 'rubocop', require: false
 
 group :test do
