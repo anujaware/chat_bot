@@ -4,7 +4,7 @@ module ChatBot
 
     friendly_id :name, use: [:slugged, :history]
 
-    has_many :sub_categories, class_name: 'ChatBot::SubCategory'
+    has_many :sub_categories
 
     validates :name, presence: true, uniqueness: {case_sensitive: false}
 

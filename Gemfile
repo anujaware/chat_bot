@@ -19,8 +19,8 @@ gem 'aasm'
 gem 'rubocop', require: false
 
 group :test do
-  gem 'database_cleaner'
+  #gem 'database_cleaner'
   gem 'faker'
-  gem 'shoulda', '~> 3.5'
-  gem 'shoulda-matchers', '~> 2.0'
+  #gem 'shoulda'
+  #gem 'shoulda-matchers'
 end

@@ -1,6 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe ChatBot::Category, type: :model do
+  context 'associations' do
+    it { is_expected.to have_many(:sub_categories) }
+  end
+
+  context 'validations' do
+    it { is_expected.to validate_presence_of(:name) }
+  end
+=begin
   Category = ChatBot::Category
 
   context "Validation" do
@@ -52,4 +60,5 @@ RSpec.describe ChatBot::Category, type: :model do
     end
 
   end
+=end
 end

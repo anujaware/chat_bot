@@ -177,7 +177,7 @@ module ChatBot
                                         starts_on_val: 2, is_ready_to_schedule: true})#, repeat_limit: 3})
           @sub_cat_2.update_attributes({priority: 3, starts_on_key: SubCategory::AFTER_DAYS,
                                         starts_on_val: 3, is_ready_to_schedule: true})
-          @sub_cat_3.update_attributes({priority: 4, starts_on_key: SubCategory::IMMEDIATE,
+          @sub_cat_3.update_attributes({priority: 4, starts_on_key: SubCategory::IMMEIDIATE,
                                         is_ready_to_schedule: true})
 
           @d1 = @sub_cat_1.initial_dialog
