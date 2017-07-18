@@ -8,7 +8,7 @@ class CreateChatBotSubCategories < ActiveRecord::Migration
       t.string :starts_on_key, null: false
       t.string :starts_on_val
       t.boolean :is_ready_to_schedule, default: false
-      t.integer :category_id, default: false
+      t.integer :category_id
       t.integer :initial_dialog_id
       t.string :slug, null: false, unique: true
 
